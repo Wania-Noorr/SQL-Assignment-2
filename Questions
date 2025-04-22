@@ -1,0 +1,76 @@
+-- DDL/DML CHANGES
+
+
+-- [Question 1] use DDL commands to add a column to the customers table called street. add this column directly after the address column
+
+
+-- [Question 2] update this column by extracting the street name from address
+-- (hint: MySQL also has text fucntions like substring_index, mid/left/right functions the same as excel. You can first test these with SELECT before using UPDATE)
+
+
+-- [Question 3] Using DDL commands, add a column called stock_level to the items table.
+
+
+-- [Question 4] Use CASE to update the stock_level column in the following way:
+-- low stock if the amount is below 20
+-- moderate stock if the amount is between 20 and 50
+-- high stock if the amount is over 50
+
+
+
+
+-- -----------------------------------------------------------------------------------------------------------------------------------------
+-- Analysis 
+
+
+-- [Question 5] In a SIMPLE SELECT query, make a column called price_label in which label each item's price as:
+-- low price if its price is below 10
+-- moderate price if its price is between 10 and 50
+-- high price if its price is above 50
+-- "unavailable" in all other cases
+-- order this query by price in descending order
+
+
+
+-- [Question 6]
+-- Find out the total number of orders per street per city. Your results should show street, city and total_orders
+-- results should be ordered by street in ascending order and cities in descending order (Hint: USE JOIN AND GROUP BY)
+
+
+-- [Question 7]
+-- USING A JOIN, select the following:
+-- customer_id, last name, address, phone number, order id, order date, item name, item type, and item price. 
+
+
+-- [Question 8]
+-- USING A JOIN, select customer_ids, first names, last names and addresses of customers who have never placed an order.
+-- Only these four columns should show in your results
+
+
+-- [Question 9]
+-- DO THE EXACT SAME AS ABOVE USING A MULTI-ROW SUBQUERY IN THE WHERE CLAUSE
+-- select customer_ids, first_names, last_names and addresses of customers who have never placed an order.
+-- Only these four columns should show in your results
+
+
+-- [Question 10]
+-- USING A CORRELATED SUBQUERY IN THE WHERE CLAUSE:
+-- select item id, item name, item type and item price for all those items that have a price higher than the average price FOR THEIR ITEM TYPE (NOT average of the whole column)
+-- order your result by item type; (hint: Use correlated subquery to match items table with itself by matching item_type) 
+
+
+-- [Question 11]
+-- USING A SUBQUERY IN THE WHERE CLAUSE, find out customer ids, the order date and item id of their most recent order
+-- order your result by customer_id
+
+
+-- [Question 12] 
+-- USE A JOIN to find out which customers placed an order in their birth MONTH
+-- Your results should show customer_id, date_of_birth, order_date (hint: match month of order_date with month of date_of_birth)
+
+
+-- [Question 13]
+-- USE A MULTI COLUMN SUBQUERY to find out which customers placed an order on their birth DAY (month+day like date of birth is 4th August, 2001 while order date is 4th August)
+-- Your results should show customer_id and date_of_birth
+
+
